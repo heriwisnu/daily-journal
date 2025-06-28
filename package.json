@@ -1,0 +1,23 @@
+{
+  "name": "daily-journal-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot with a web-app for daily journaling.",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm install && npm run install:backend",
+    "start": "node backend/src/server.js",
+    "dev": "nodemon backend/src/server.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "journal",
+    "web-app"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

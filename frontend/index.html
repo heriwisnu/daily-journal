@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Daily Journal</h1>
+            <p id="user-greeting"></p>
+        </header>
+
+        <main>
+            <div id="journal-view">
+                <div class="date-selector">
+                    <button id="prev-day"><</button>
+                    <input type="date" id="current-date">
+                    <button id="next-day">></button>
+                </div>
+                <textarea id="journal-entry" placeholder="How was your day?"></textarea>
+                <div class="mood-selector">
+                    <span>Mood:</span>
+                    <button class="mood-btn" data-mood="😊">😊</button>
+                    <button class="mood-btn" data-mood="😐">😐</button>
+                    <button class="mood-btn" data-mood="😢">😢</button>
+                    <button class="mood-btn" data-mood="😠">😠</button>
+                    <button class="mood-btn" data-mood="🤩">🤩</button>
+                </div>
+                <button id="save-btn">Save Entry</button>
+            </div>
+
+            <div id="archive-view" style="display: none;">
+                <h2>Journal Archive</h2>
+                <ul id="entry-list"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <button id="toggle-view-btn">View Archive</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
